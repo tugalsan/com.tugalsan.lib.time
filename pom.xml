@@ -7,12 +7,6 @@
   
     <dependencies>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.gwtproject</groupId>
             <artifactId>gwt-user</artifactId><!--gwt-user ver2022.07.05 -->
             <exclusions>
@@ -38,17 +32,12 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>com.tugalsan.api.sql.basic</artifactId>
+            <artifactId>com.tugalsan.api.url</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>com.tugalsan.api.servlet.url</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>com.tugalsan.api.tomcat</artifactId>
+            <artifactId>com.tugalsan.api.optional</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
