@@ -31,10 +31,12 @@ public class TS_LibTimeUtils {
                     "url", url.toString()
             );
         }
-        var st = new StringTokenizer(" ");
-        if (st.countTokens() != 2) {
+        var st = new StringTokenizer(urlData," ");
+        var tokenCount = st.countTokens();
+        if (tokenCount != 2) {
             return TGS_Optional.ofEmpty("ERROR@", d.className, "fetch",
-                    "REASON: st.countTokens() != 2 where",
+                    "REASON: tokenCount != 2 where",
+                    "tokenCount", String.valueOf(tokenCount),
                     "pattern", pattern,
                     "urlData", urlData,
                     "url", url.toString()
