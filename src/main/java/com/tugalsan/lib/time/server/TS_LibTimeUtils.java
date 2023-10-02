@@ -26,7 +26,9 @@ public class TS_LibTimeUtils {
         if (pattern.length() != urlData.length()) {
             return TGS_Optional.ofEmpty("ERROR@", d.className, "fetch",
                     "REASON: pattern.length() != urlData.length() where",
-                    "pattern", pattern
+                    "pattern", pattern,
+                    "urlData", urlData,
+                    "url", url.toString()
             );
         }
         var st = new StringTokenizer(" ");
@@ -34,7 +36,8 @@ public class TS_LibTimeUtils {
             return TGS_Optional.ofEmpty("ERROR@", d.className, "fetch",
                     "REASON: st.countTokens() != 2 where",
                     "pattern", pattern,
-                    "urlData", urlData
+                    "urlData", urlData,
+                    "url", url.toString()
             );
         }
         var dateStr = st.nextToken();
@@ -44,7 +47,8 @@ public class TS_LibTimeUtils {
                     "REASON: dateLng == null where",
                     "pattern", pattern,
                     "urlData", urlData,
-                    "dateStr", dateStr
+                    "dateStr", dateStr,
+                    "url", url.toString()
             );
         }
         var timeStr = st.nextToken();
@@ -55,7 +59,8 @@ public class TS_LibTimeUtils {
                     "pattern", pattern,
                     "urlData", urlData,
                     "dateStr", dateStr,
-                    "timeStr", timeStr
+                    "timeStr", timeStr,
+                    "url", url.toString()
             );
         }
         return TGS_Optional.of(TGS_Time.ofDateAndTime(dateLng, timeLng));
