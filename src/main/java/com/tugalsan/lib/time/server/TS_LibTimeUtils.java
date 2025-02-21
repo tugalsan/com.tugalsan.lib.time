@@ -43,7 +43,7 @@ public class TS_LibTimeUtils {
             ));
         }
         var dateStr = st.nextToken();
-        var dateLng = TGS_CastUtils.toLong(dateStr);
+        var dateLng = TGS_CastUtils.toLong(dateStr).orElse(null);
         if (dateLng == null) {
             return TGS_UnionExcuse.ofExcuse(d.className, "fetch", TGS_StringUtils.cmn().concat(
                     "REASON: dateLng == null where",
@@ -54,7 +54,7 @@ public class TS_LibTimeUtils {
             ));
         }
         var timeStr = st.nextToken();
-        var timeLng = TGS_CastUtils.toLong(timeStr);
+        var timeLng = TGS_CastUtils.toLong(timeStr).orElse(null);
         if (timeLng == null) {
             return TGS_UnionExcuse.ofExcuse(d.className, "fetch", TGS_StringUtils.cmn().concat(
                     "REASON: dateLng == null where",
