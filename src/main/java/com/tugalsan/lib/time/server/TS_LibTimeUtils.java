@@ -1,14 +1,14 @@
 package com.tugalsan.lib.time.server;
 
-import com.tugalsan.api.cast.client.TGS_CastUtils;
-import com.tugalsan.api.log.server.TS_Log;
-import com.tugalsan.api.string.client.TGS_StringUtils;
-import com.tugalsan.api.time.client.TGS_Time;
-import com.tugalsan.api.union.client.TGS_UnionExcuse;
-import com.tugalsan.api.url.server.TS_UrlDownloadUtils;
-import com.tugalsan.lib.time.client.TGS_LibTime;
-import java.time.Duration;
-import java.util.StringTokenizer;
+import module com.tugalsan.api.cast;
+import module com.tugalsan.api.log;
+import module com.tugalsan.api.string;
+import module com.tugalsan.api.union;
+import module com.tugalsan.api.url;
+import module com.tugalsan.lib.time;
+import module com.tugalsan.api.time;
+import java.time.*;
+import java.util.*;
 
 public class TS_LibTimeUtils {
 
